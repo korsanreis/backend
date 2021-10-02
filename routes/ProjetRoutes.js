@@ -8,16 +8,14 @@ const router = express.Router();
 
 router.post(
   "/",
-  checkAuth,
   uploadMulter.single("projectImage"),
   ProjectController.addProject
 );
 router.get("/:projectId", ProjectController.getOneProject);
 router.get("/", ProjectController.getAllProjects);
-router.delete("/:projectId", checkAuth, ProjectController.deleteProject);
+router.delete("/:projectId", ProjectController.deleteProject);
 router.put(
   "/:projectId",
-  checkAuth,
   uploadMulter.single("projectImage"),
   ProjectController.updateProject
 );

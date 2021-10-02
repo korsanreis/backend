@@ -5,10 +5,10 @@ const checkAuth = require("../middlewares/check-auth");
 
 const router = express.Router();
 
-router.post("/", checkAuth, LanguageController.addLanguage);
+router.post("/",  LanguageController.addLanguage);
 router.get("/:languageId", LanguageController.getOneLanguage);
 router.get("/", LanguageController.getAllLanguages);
-router.delete("/:languageId", checkAuth, LanguageController.deleteLanguage);
-router.put("/:languageId", checkAuth, LanguageController.updateLanguage);
+router.delete("/:languageId",  LanguageController.deleteLanguage);
+router.put("/:languageId",  LanguageController.updateLanguage);
 
 module.exports = router;
