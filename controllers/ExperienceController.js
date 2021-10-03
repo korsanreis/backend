@@ -29,7 +29,6 @@ const addExperience = async (req, res, next) => {
     startDate: req.body.startDate,
     endDate: req.body.endDate,
     description: req.body.description,
-    technologies: req.body.technologies,
   });
 
   try {
@@ -62,7 +61,6 @@ const updateExperience = async (req, res, next) => {
       startDate: req.body.startDate,
       endDate: req.body.endDate,
       description: req.body.description,
-      technologies: req.body.technologies,
     },
     function (err, experience) {
       if (err) {
