@@ -26,6 +26,7 @@ const addProject = async (req, res, next) => {
     _id: new mongoose.Types.ObjectId(),
     title: req.body.title,
     description: req.body.description,
+    technologies: req.body.technologies,
     haveLink: req.body.haveLink,
     link: req.body.link,
     projectImage: req.file.path,
@@ -70,6 +71,7 @@ const updateProject = async (req, res, next) => {
     {
       title: req.body.title,
       description: req.body.description,
+      technologies: req.body.technologies,
       haveLink: req.body.haveLink,
       link: req.body.link,
       projectImage: filePath,

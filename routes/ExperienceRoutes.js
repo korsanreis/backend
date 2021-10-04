@@ -5,10 +5,10 @@ const checkAuth = require("../middlewares/check-auth");
 
 const router = express.Router();
 
-router.post("/",  ExperienceController.addExperience);
+router.post("/", checkAuth, ExperienceController.addExperience);
 router.get("/:experienceId", ExperienceController.getOneExperience);
 router.get("/", ExperienceController.getAllExperiences);
-router.delete("/:experienceId", ExperienceController.deleteExperience);
-router.put("/:experienceId", ExperienceController.updateExperience);
+router.delete("/:experienceId",checkAuth, ExperienceController.deleteExperience);
+router.put("/:experienceId",checkAuth, ExperienceController.updateExperience);
 
 module.exports = router;

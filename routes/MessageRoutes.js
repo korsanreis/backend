@@ -6,7 +6,7 @@ const checkAuth = require("../middlewares/check-auth");
 const router = express.Router();
 
 router.post("/", MessageController.addMessage);
-router.get("/", MessageController.getAllMessages);
-router.put("/:messageId", MessageController.updateMessage);
+router.get("/", checkAuth, MessageController.getAllMessages);
+router.put("/:messageId", checkAuth, MessageController.updateMessage);
 
 module.exports = router;
