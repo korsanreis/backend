@@ -1,0 +1,7 @@
+runtime: nodejs16
+service: default
+env_variables:
+  DATA_BASE_CONNECTION: "mongodb+srv://korsanreis:0@cluster0.82dc2.mongodb.net/Cluster0?retryWrites=true&w=majority"
+  PORT: 4000
+  TOKEN_SECRET: "j34mşoj3p4pjwefpop2"
+
